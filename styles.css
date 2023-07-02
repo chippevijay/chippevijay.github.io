@@ -39,7 +39,7 @@ nav ul li a {
 }
 
 .hero {
-  background-image: url("background.jpg");
+  background-image: url("background1.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -77,4 +77,47 @@ footer {
   background-color: #f4f4f4;
   padding: 10px;
   text-align: center;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  nav ul li {
+    margin-left: 10px;
+  }
+
+  .hero {
+    background-image: url("background2.jpg");
+  }
+
+  .hero-content {
+    max-width: 400px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    background-image: url("background3.jpg");
+  }
 }
