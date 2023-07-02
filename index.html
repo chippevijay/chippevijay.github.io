@@ -1,37 +1,149 @@
-<!doctype html>
-
-<!-- this is a comment for human! -->
-
+<!DOCTYPE html>
 <html lang="en">
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
   <header>
-     <title>Chippe Vijay</title>
-     <link rel="stylesheet" href="css/master.css">
-     <link rel="FaviconIcon" href="favicon.ico" type="image/x-icon">
-     <link rel="shortcut" href="favicon.ico" type="image/x-icon">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <meta name="name" content="Chippe Vijay's Portal">
-     
+    <nav>
+      <h1>My Resume</h1>
+      <button class="toggle-button" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <body>
-     <img src="images/banner.jpg" width="75%" alt="banner">
-     <h1>Chippe Vijay's Portal</h1>
-     <h2>About me</h2>
-     <p>I am Persuing Computer Science Engineering in LPU.</p>
-     <p>I am a Devops Engineer and Web developer.</p>
-     <P>I am Enthusiastic learner,who is having faith in hard work,humanity and belives in putting the stage on fire.</p>
-     <h2>Credentials and Portfolio</h2>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Resume</h1>
+      <p>I am a Java Full Stack Developer with experience in Java, Spring Boot, RESTful APIs, Angular, and more.</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
 
-     <p><a href="resume.html">My Resume</a> | <a href="https://github.com/chippevijay">My GitHub</a> </p>
-     <h2>Contact</h2>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        With over 2 years of experience in development, design, and testing stage of software applications, I have a strong background in Core Java, OOPS, Collections, Spring Boot, Spring MVC, Spring REST, Spring Data, RESTful Web Services, and SOAP webservices. I am also well-versed in Hibernate and Angular11 for front-end development.
+      </p>
+      <p>
+        As a Certified Google Cloud Associate Cloud Engineer, I possess in-depth knowledge of cloud computing and have hands-on experience with Microservices and Spring Cloud. I have worked with Apache Kafka, utilizing it as a message streaming service in web applications. My testing expertise includes JUnit and Mockito, and I have experience working with SQL databases such as PostgreSQL, MySQL, and MongoDB.
+      </p>
+      <p>
+        Throughout my career, I have followed the SDLC (Software Development Life Cycle) and worked in Agile Methodology. I am a dedicated professional who is constantly learning and adapting to new technologies, and I strive to deliver high-quality software solutions.
+      </p>
+    </div>
+  </section>
 
-     <p>Email: <a href="mailto:cvijay646@gmail.com">cvijay646@gmail.com</a></p>
-  </body>
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <ul>
+      <li>
+        <h3>Software Engineer</h3>
+        <p><strong>Cognizant Technology Solutions</strong> (September 2021 – Present)</p>
+        <p>Bengaluru</p>
+        <p>
+          - Developed RESTful APIs & SOAP services using Spring Boot.<br>
+          - Involved in migration of Structs and Portlets webapps to Spring Boot and GCP Anthos.<br>
+          - Integrated RESTful APIs with the web applications.<br>
+          - Involved in enhancing functionalities of various modules in the applications.<br>
+          - Developed various Java Bean and Service components for implementing business logic.<br>
+          - Conducted code analysis, bug fixes, and testing.
+        </p>
+      </li>
+      <li>
+        <h3>Intern - JAVA FSE</h3>
+        <p><strong>Cognizant Technology Solutions</strong> (March 2021 – August 2021)</p>
+        <p>Bengaluru</p>
+        <p>
+          - Include relevant responsibilities and achievements during your internship.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <h2>Education</h2>
+      <ul class="education-list">
+        <li>
+          <h3>Lovely Professional University, Punjab</h3>
+          <p>B.Tech (CSE) - 2021</p>
+          <p>Percentage: 72%</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Java</li>
+      <li>Spring Boot</li>
+      <li>Spring Data</li>
+      <li>RESTful Web Services</li>
+      <li>SOAP</li>
+      <li>MySQL</li>
+      <li>Google Cloud Platform (GCP)</li>
+      <li>Angular 11</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <h3>Retail Banking System (Safe Bank)</h3>
+        <p><strong>07/2021 - 08/2021</strong></p>
+        <p>
+          - Developed a full-stack application using the latest industry-adopted technologies and frameworks.<br>
+          - Gained hands-on expertise and a robust foundation in Angular, Bootstrap, Java, Spring Boot, and more.<br>
+          - Deployed all microservices in AWS and tested their functionality using Postman without any failure.<br>
+          - Played a key role in the UI design, development, testing, deployment, and improvement of the web-based application.
+        </p>
+      </li>
+      <li>
+        <h3>Project 2</h3>
+        <p>Project description and your role</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>
+      You can reach out to me through the following channels:
+    </p>
+    <ul>
+      <li>Email: cvijay646@gmail.com</li>
+      <li>Phone: +91 8500970540</li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/chippe-vijay">Your Profile</a></li>
+    </ul>
+  </section>
 
   <footer>
-    <hr>
-    <code>Copyright (c) 2020 Chippe Vijay</code>
+    <p>© 2023 My Resume. All rights reserved.</p>
   </footer>
+</body>
+<script>
+  document.querySelector('.toggle-button').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('open');
+});
 
+</script>
 </html>
