@@ -121,3 +121,37 @@ footer {
     background-image: url("background3.jpg");
   }
 }
+
+/* Add your existing CSS styles here */
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  /* Header */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  /* Sections */
+  section {
+    padding: 50px 20px;
+  }
+
+  /* Hero section */
+  .hero-content {
+    text-align: center;
+  }
+
+  /* Experience and Projects sections */
+  section#experience ul,
+  section#projects ul {
+    padding-left: 20px;
+  }
+}
+
+/* Add more media queries as needed for different screen sizes */
