@@ -1,58 +1,122 @@
-<!doctype html>
-
-<!-- this is a comment for human! -->
-
+<!DOCTYPE html>
 <html lang="en">
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
   <header>
-    <title>Chippe Vijay's Resume</title>
-     <link rel="stylesheet" href="css/master.css">
-     <link rel="FaviconIcon" href="favicon.ico" type="image/x-icon">
-     <link rel="shortcut" href="favicon.ico" type="image/x-icon">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <meta name="name" content="Chippe Vijay's Portal">
+    <nav>
+      <h1>My Resume</h1>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <body>
-    <hr>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Resume</h1>
+      <p>I am a Software Engineer with experience in Java, Spring Boot, RESTful APIs, and more.</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
 
-    <img src="images/headshot.jpg" alt="Harrison Kong's headshot" width="20%">
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a Software Engineer at Cognizant Technology Solutions, Bengaluru. I have been working with CoreLogic in the Tax Services ITO team, where I have gained experience in various technologies such as Java, Spring Boot, Spring Data, RESTful Web Services, SOAP, MySQL, GCP, and Angular 11.
+    </p>
+  </section>
 
-    <h1>Chippe Vijay</h1>
-    <h4>Web Developer and DevOps Engineer</h4>
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <ul>
+      <li>
+        <h3>Software Engineer</h3>
+        <p><strong>Cognizant Technology Solutions</strong> (September 2021 – Present)</p>
+        <p>Bengaluru</p>
+        <p>
+          - Developed RESTful APIs & SOAP services using Spring Boot.<br>
+          - Involved in migration of Structs and Portlets webapps to Spring Boot and GCP Anthos.<br>
+          - Integrated RESTful APIs with the web applications.<br>
+          - Involved in Enhancing functionalities of various modules in the applications.<br>
+          - Developed various Java Bean and Service components for implementing business logic.<br>
+          - Code analysis, bug fixes, and testing.
+        </p>
+      </li>
+      <li>
+        <h3>Intern - JAVA FSE</h3>
+        <p><strong>Cognizant Technology Solutions</strong> (March 2021 – August 2021)</p>
+        <p>Bengaluru</p>
+        <p>
+          - Include relevant responsibilities and achievements during your internship.
+        </p>
+      </li>
+    </ul>
+  </section>
 
-    <p>Email: <a href="mailto:cvijay646@gmail.com" target="_blank">cvijay646@gmail.com</a></p>
-    <!-- don't post physical address, personal phone number or other personal information on the web! -->
-
-    <h2>Portfolio</h2>
-      <h3>GitHub: <a href="https://github.com/chippevijay" target="_blank">https://github.com/chippevijay</a></h3>
-
+  <section id="education" class="section">
     <h2>Education</h2>
+    <ul>
+      <li>
+        <h3>Bachelor of Technology in Computer Science</h3>
+        <p>Your University Name</p>
+        <p>Year of Graduation</p>
+      </li>
+    </ul>
+  </section>
 
-    <h3>Lovely Professional University, Punjab</h3>
-    <h4>B-tech: Computer Science Engineering, CGPA: 6.88</h4>
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul>
+      <li>Java</li>
+      <li>Spring Boot</li>
+      <li>Spring Data</li>
+      <li>RESTful Web Services</li>
+      <li>SOAP</li>
+      <li>MySQL</li>
+      <li>Google Cloud Platform (GCP)</li>
+      <li>Angular 11</li>
+    </ul>
+  </section>
 
+  <section id="projects" class="section">
     <h2>Projects</h2>
+    <ul>
+      <li>
+        <h3>Project 1</h3>
+        <p>Project description and your role</p>
+      </li>
+      <li>
+        <h3>Project 2</h3>
+        <p>Project description and your role</p>
+      </li>
+    </ul>
+  </section>
 
-    <h3>Deploying a Sample website in Container using Docker</h3>
-    <h4>March 2020 - April 2020</h4>
-      <ul>
-        <li>Using dockerfile,existing image from my Hub installing apache2 &</li>
-        <li>build managing containers,initializing swarm, linking containers</li>
-        <li>Deploying containers on a specific port using Docker Compose
-      </ul>
-
-    <h3>Monitoring services in server with nagios core and config Ansible</h3>
-    <h4>January 2020 - March 2020</h4>
-      <ul>
-        <li>Using nagios core,installing ping service on slave </li>
-        <li>monitoring with Nagios core GUI and configuring Ansible checking disk space </li>
-      </ul>
-  </body>
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>
+      You can reach out to me through the following channels:
+    </p>
+    <ul>
+      <li>Email: your.email@example.com</li>
+      <li>Phone: +1234567890</li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">Your Profile</a></li>
+    </ul>
+  </section>
 
   <footer>
-  <hr>
-  <p><a href="index.html">Back to my portal</a><p>
+    <p>© 2023 My Resume. All rights reserved.</p>
   </footer>
-
+</body>
 </html>
