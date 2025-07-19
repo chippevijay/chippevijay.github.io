@@ -1,156 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vijay Chippe | Full Stack Developer</title>
+
+  <!-- Bootstrap, Fonts, Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", () => AOS.init());</script>
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header.bg-dark {
+      background: linear-gradient(to right, #141e30, #243b55);
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+    h2 {
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card {
+      border-left: 5px solid #4f46e5;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #111827;
+      color: white;
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <h1>My Resume</h1>
-      <button class="toggle-button" aria-label="Toggle Menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <!-- Hero -->
+  <header class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h1 class="fw-bold">Vijay Chippe</h1>
+      <p class="lead">Java Full Stack Developer | Bengaluru, India</p>
+      <div>
+        <a href="mailto:cvijay646@gmail.com" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-envelope"></i> Email</a>
+        <a href="tel:+918500970540" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-telephone"></i> Call</a>
+        <a href="https://linkedin.com/in/chippe-vijay/" class="btn btn-outline-info btn-sm" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
   </header>
 
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h1>Welcome to My Resume</h1>
-      <p>I am a Java Full Stack Developer with experience in Java, Spring Boot, RESTful APIs, Angular, and more.</p>
-      <a href="#contact" class="btn">Contact Me</a>
+  <!-- Summary -->
+  <section class="container" data-aos="fade-up">
+    <h2><i class="bi bi-person-vcard"></i> Professional Summary</h2>
+    <p>
+      Java Full Stack Developer with 4+ years of experience designing and implementing enterprise-scale applications using Java, Spring Boot, Angular, and Google Cloud Platform (GCP). Proven ability to deliver performant, scalable APIs and frontends across finance and automotive domains. Adept in Agile delivery, CI/CD pipelines, secure cloud infrastructure, and real-time data processing. Passionate about clean architecture, automation, DevSecOps, and integrating AI into enterprise solutions.
+    </p>
+  </section>
+
+  <!-- Experience -->
+  <section class="container" data-aos="fade-up">
+    <h2><i class="bi bi-briefcase-fill"></i> Experience</h2>
+
+    <div class="card p-3 mb-4 shadow-sm">
+      <h5>Ford Motor Company <span class="text-muted">(Aug 2024 – Present)</span></h5>
+      <p class="text-muted">Tech Stack: Java, Spring Boot, Angular, GCP, OpenShift, REST APIs, GitHub Actions</p>
+      <ul>
+        <li>Designed full-stack vehicle lifecycle apps for real-time scheduling, updates, and compliance tracking.</li>
+        <li>Integrated Excel processing and Vertex AI-based validation modules to automate document checks.</li>
+        <li>Architected namespace-wise backup/restore automation on OpenShift using Kubernetes Jobs and CronJobs.</li>
+        <li>Automated builds, tests, and OpenShift deployments with GitHub Actions, including Slack notifications and rollback strategy.</li>
+        <li>Implemented OAuth2 and IAM policies for cross-service secure access to GCP-hosted microservices.</li>
+        <li>Collaborated with global teams in Agile mode, participated in sprint demos, and mentored new developers.</li>
+      </ul>
     </div>
-  </section>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        With over 2 years of experience in development, design, and testing stage of software applications, I have a strong background in Core Java, OOPS, Collections, Spring Boot, Spring MVC, Spring REST, Spring Data, RESTful Web Services, and SOAP webservices. I am also well-versed in Hibernate and Angular11 for front-end development.
-      </p>
-      <p>
-        As a Certified Google Cloud Associate Cloud Engineer, I possess in-depth knowledge of cloud computing and have hands-on experience with Microservices and Spring Cloud. I have worked with Apache Kafka, utilizing it as a message streaming service in web applications. My testing expertise includes JUnit and Mockito, and I have experience working with SQL databases such as PostgreSQL, MySQL, and MongoDB.
-      </p>
-      <p>
-        Throughout my career, I have followed the SDLC (Software Development Life Cycle) and worked in Agile Methodology. I am a dedicated professional who is constantly learning and adapting to new technologies, and I strive to deliver high-quality software solutions.
-      </p>
-    </div>
-  </section>
-
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <h3>Software Engineer</h3>
-        <p><strong>Cognizant Technology Solutions</strong> (September 2021 – Present)</p>
-        <p>Bengaluru</p>
-        <p>
-          - Developed RESTful APIs & SOAP services using Spring Boot.<br>
-          - Involved in migration of Structs and Portlets webapps to Spring Boot and GCP Anthos.<br>
-          - Integrated RESTful APIs with the web applications.<br>
-          - Involved in enhancing functionalities of various modules in the applications.<br>
-          - Developed various Java Bean and Service components for implementing business logic.<br>
-          - Conducted code analysis, bug fixes, and testing.
-        </p>
-      </li>
-      <li>
-        <h3>Intern - JAVA FSE</h3>
-        <p><strong>Cognizant Technology Solutions</strong> (March 2021 – August 2021)</p>
-        <p>Bengaluru</p>
-        <p>
-          - Include relevant responsibilities and achievements during your internship.
-        </p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="education" class="section">
-    <div class="container">
-      <h2>Education</h2>
-      <ul class="education-list">
-        <li>
-          <h3>Lovely Professional University, Punjab</h3>
-          <p>B.Tech (CSE) - 2021</p>
-          <p>Percentage: 72%</p>
-        </li>
+    <div class="card p-3 mb-4 shadow-sm">
+      <h5>Cognizant – CoreLogic <span class="text-muted">(Sep 2021 – Aug 2024)</span></h5>
+      <p class="text-muted">Tech Stack: Java, Spring Boot, REST/SOAP, Angular 11, GCP, MySQL, Jenkins</p>
+      <ul>
+        <li>Engineered API services that handled U.S. mortgage tax data and integrated with third-party property APIs.</li>
+        <li>Migrated legacy portals to modern Spring Boot services deployed on GCP Anthos and containerized pipelines via Jenkins.</li>
+        <li>Improved performance of MySQL-heavy tax modules by redesigning indexes, stored procedures, and caching logic.</li>
+        <li>Contributed to Anthos rollout, created internal dashboards for deployment visibility, and resolved Veracode flaws.</li>
+        <li>Collaborated with U.S.-based product teams for delivery and earned 1st place in NA Delivery recognition.</li>
       </ul>
     </div>
   </section>
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
+  <!-- Projects -->
+  <section class="container" data-aos="fade-up">
+    <h2><i class="bi bi-code-slash"></i> Projects</h2>
+
+    <div class="card p-3 mb-4 shadow-sm">
+      <h5>📊 Excel Upload & Spell Checker Service (Ford)</h5>
+      <p class="text-muted">Tech Stack: Spring Boot, Angular, GCP, Vertex AI, OpenShift</p>
+      <ul>
+        <li>Created UI and backend integration for uploading Excel files to GCP Cloud Storage.</li>
+        <li>Implemented a Vertex AI + ADK module to contextually validate grammar/spelling in sheet contents.</li>
+        <li>Added support for multiple Excel formats, dynamic field parsing, and GCS versioning.</li>
+        <li>Deployed using OpenShift pipelines with resource constraints, observability via Prometheus.</li>
+      </ul>
+    </div>
+
+    <div class="card p-3 mb-4 shadow-sm">
+      <h5>☕ Cafe Management System</h5>
+      <p class="text-muted">Tech Stack: Java, Spring Boot, Angular, MySQL, JWT</p>
+      <ul>
+        <li>Developed complete POS-like application supporting admin login, product management, and order flow.</li>
+        <li>Implemented Spring Security with JWT token generation and Angular interceptors.</li>
+        <li>Added charts, PDF invoice generator, and live inventory management features.</li>
+      </ul>
+    </div>
+
+    <div class="card p-3 mb-4 shadow-sm">
+      <h5>🐦 Tweet App</h5>
+      <p class="text-muted">Tech Stack: Java, Spring Boot, Angular, MongoDB, Kafka, JWT</p>
+      <ul>
+        <li>Real-time tweet platform using Kafka for event-based streaming.</li>
+        <li>MongoDB for fast storage/retrieval of posts with embedded comment structure.</li>
+        <li>Implemented reactive Spring endpoints and push-based WebSocket support.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="container" data-aos="fade-up">
+    <h2><i class="bi bi-patch-check"></i> Certifications</h2>
     <ul>
-      <li>Java</li>
-      <li>Spring Boot</li>
-      <li>Spring Data</li>
-      <li>RESTful Web Services</li>
-      <li>SOAP</li>
-      <li>MySQL</li>
-      <li>Google Cloud Platform (GCP)</li>
-      <li>Angular 11</li>
+      <li><a href="https://www.credential.net/22e99e36-1bc6-4f77-9ded-6c7c2c0a61d7" target="_blank">🎓 Google Cloud Associate Cloud Engineer</a></li>
     </ul>
   </section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
+  <!-- Education -->
+  <section class="container" data-aos="fade-up">
+    <h2><i class="bi bi-mortarboard"></i> Education</h2>
     <ul>
-      <li>
-        <h3>Retail Banking System (Safe Bank)</h3>
-        <p><strong>07/2021 - 08/2021</strong></p>
-        <p>
-          - Developed a full-stack application using the latest industry-adopted technologies and frameworks.<br>
-          - Gained hands-on expertise and a robust foundation in Angular, Bootstrap, Java, Spring Boot, and more.<br>
-          - Deployed all microservices in AWS and tested their functionality using Postman without any failure.<br>
-          - Played a key role in the UI design, development, testing, deployment, and improvement of the web-based application.
-        </p>
-      </li>
-      <li>
-        <h3>Tic Tac Toe</h3>
-        <p>
-          The game allows two players to take turns by clicking on the cells of the game board. Each player is <br>
-          represented by 'X' and 'O' symbols. The game will determine a winner or a draw and display the result. <br>
-          You can click the "Reset" button to start a new game.
-        </p>
-        <p>
-          <a href="tictactoe/tictactoe.html">Link to the game</a>
-        </p>
-      </li>
+      <li><strong>B.Tech (CSE)</strong> – Lovely Professional University – 72%</li>
     </ul>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>
-      You can reach out to me through the following channels:
-    </p>
+  <!-- Achievements -->
+  <section class="container" data-aos="fade-up">
+    <h2><i class="bi bi-award-fill"></i> Achievements & Interests</h2>
     <ul>
-      <li>Email: cvijay646@gmail.com</li>
-      <li>Phone: +91 8500970540</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/chippe-vijay">Your Profile</a></li>
+      <li>🏆 2nd Place – Blue Bolt Hackathon (Cognizant)</li>
+      <li>🥇 1st Place – North America Project Delivery (Team Award)</li>
+      <li>🎮 Gaming, Cricket, Travel, Tech News & Gadgets</li>
     </ul>
   </section>
 
-  <footer>
-    <p>© 2023 My Resume. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-5">
+    <p class="mb-0">&copy; 2025 Vijay Chippe. Crafted with ❤️ using Bootstrap, AOS, and AI.</p>
   </footer>
 </body>
-<script>
-  document.querySelector('.toggle-button').addEventListener('click', function() {
-  document.querySelector('.nav-links').classList.toggle('open');
-});
-
-</script>
 </html>
