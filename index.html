@@ -1,185 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vijay Chippe | Full Stack Developer</title>
 
-  <!-- Bootstrap, Fonts, Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-  <!-- AOS Animations -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", () => AOS.init());</script>
-
-  <!-- Styles -->
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f4f6f8;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+      line-height: 1.7;
     }
-    header.bg-dark {
-      background: linear-gradient(to right, #141e30, #243b55);
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #fff;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-      transition: transform 0.3s ease;
-    }
-    .profile-img:hover {
-      transform: scale(1.05);
-    }
-    h2 {
-      font-weight: 600;
-      color: #2563eb;
-      margin-top: 50px;
-      margin-bottom: 20px;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+
+    .hero {
+      min-height: 100vh;
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      padding: 40px;
+      background:
+        radial-gradient(circle at top right, #2563eb55, transparent 30%),
+        radial-gradient(circle at bottom left, #7c3aed55, transparent 30%),
+        #0b1120;
     }
-    .card {
-      border-left: 5px solid #4f46e5;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 24px
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    .glass {
+      background: rgba(255, 255, 255, .05);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 24px;
+      padding: 50px;
     }
-    footer {
-      background: #111827;
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 800;
+    }
+
+    .gradient {
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      margin: 15px 0;
+      color: #cbd5e1;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 8px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      background: #2563eb;
       color: white;
+    }
+
+    .btn.secondary {
+      background: #1e293b
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      color: white;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      padding: 25px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-list li {
+      margin-left: 18px
+    }
+
+    .timeline {
+      border-left: 3px solid #3b82f6;
+      padding-left: 25px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      margin: 6px;
+      background: #172554;
+      border-radius: 999px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #94a3b8;
+      border-top: 1px solid #1f2937;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Hero -->
-  <header class="bg-dark text-white text-center py-5">
-    <div class="container">
-      <h1 class="fw-bold">Vijay Chippe</h1>
-      <p class="lead">Java Full Stack Developer | Bengaluru, India</p>
-      <div>
-        <a href="mailto:cvijay646@gmail.com" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-envelope"></i> Email</a>
-        <a href="tel:+918500970540" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-telephone"></i> Call</a>
-        <a href="https://linkedin.com/in/chippe-vijay/" class="btn btn-outline-info btn-sm" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
+  <section class="hero">
+    <div class="glass">
+      <h1>Vijay <span class="gradient">Chippe</span></h1>
+
+      <p class="subtitle">
+        Full Stack Developer | Java Backend Specialist | Cloud Engineer | AI Enthusiast
+      </p>
+
+      <p>
+        Software Engineer at Ford Motor Company with nearly 5 years of experience building enterprise-grade applications
+        across Automotive and Financial domains. Experienced in Java, Spring Boot, Angular, Google Cloud Platform (GCP),
+        OpenShift, Kubernetes and Generative AI technologies.
+      </p>
+
+      <div style="margin-top:25px">
+        <a href="mailto:cvijay646@gmail.com" class="btn">Contact Me</a>
+        <a href="https://linkedin.com/in/chippe-vijay/" target="_blank" class="btn secondary">LinkedIn</a>
       </div>
     </div>
-  </header>
-
-  <!-- Summary -->
-  <section class="container" data-aos="fade-up">
-    <h2><i class="bi bi-person-vcard"></i> Professional Summary</h2>
-    <p>
-      Java Full Stack Developer with 4+ years of experience designing and implementing enterprise-scale applications using Java, Spring Boot, Angular, and Google Cloud Platform (GCP). Proven ability to deliver performant, scalable APIs and frontends across finance and automotive domains. Adept in Agile delivery, CI/CD pipelines, secure cloud infrastructure, and real-time data processing. Passionate about clean architecture, automation, DevSecOps, and integrating AI into enterprise solutions.
-    </p>
   </section>
 
-  <!-- Experience -->
-  <section class="container" data-aos="fade-up">
-    <h2><i class="bi bi-briefcase-fill"></i> Experience</h2>
+  <section class="container">
+    <h2 class="section-title">Professional Summary</h2>
 
-    <div class="card p-3 mb-4 shadow-sm">
-      <h5>Ford Motor Company <span class="text-muted">(Aug 2024 – Present)</span></h5>
-      <p class="text-muted">Tech Stack: Java, Spring Boot, Angular, GCP, OpenShift, REST APIs, GitHub Actions</p>
-      <ul>
-        <li>Designed full-stack vehicle lifecycle apps for real-time scheduling, updates, and compliance tracking.</li>
-        <li>Integrated Excel processing and Vertex AI-based validation modules to automate document checks.</li>
-        <li>Architected namespace-wise backup/restore automation on OpenShift using Kubernetes Jobs and CronJobs.</li>
-        <li>Automated builds, tests, and OpenShift deployments with GitHub Actions, including Slack notifications and rollback strategy.</li>
-        <li>Implemented OAuth2 and IAM policies for cross-service secure access to GCP-hosted microservices.</li>
-        <li>Collaborated with global teams in Agile mode, participated in sprint demos, and mentored new developers.</li>
-      </ul>
-    </div>
+    <div class="card">
+      <p>
+        Full Stack Developer with nearly 5 years of experience designing, developing and deploying enterprise-scale
+        applications across Automotive and Financial domains. Strong expertise in Java, Spring Boot, Angular, Google
+        Cloud Platform (GCP), OpenShift and Kubernetes.
+      </p>
 
-    <div class="card p-3 mb-4 shadow-sm">
-      <h5>Cognizant – CoreLogic <span class="text-muted">(Sep 2021 – Aug 2024)</span></h5>
-      <p class="text-muted">Tech Stack: Java, Spring Boot, REST/SOAP, Angular 11, GCP, MySQL, Jenkins</p>
-      <ul>
-        <li>Engineered API services that handled U.S. mortgage tax data and integrated with third-party property APIs.</li>
-        <li>Migrated legacy portals to modern Spring Boot services deployed on GCP Anthos and containerized pipelines via Jenkins.</li>
-        <li>Improved performance of MySQL-heavy tax modules by redesigning indexes, stored procedures, and caching logic.</li>
-        <li>Contributed to Anthos rollout, created internal dashboards for deployment visibility, and resolved Veracode flaws.</li>
-        <li>Collaborated with U.S.-based product teams for delivery and earned 1st place in NA Delivery recognition.</li>
-      </ul>
+      <br>
+
+      <p>
+        Experienced in building scalable microservices, RESTful APIs, cloud-native applications and distributed systems
+        while following modern software engineering principles. Proven track record of delivering high-quality solutions
+        in Agile environments and collaborating with global teams.
+      </p>
+
+      <br>
+
+      <p>
+        Currently focused on integrating Generative AI capabilities into enterprise applications through RAG
+        architectures, AI agents, document intelligence solutions and cloud-based AI services.
+      </p>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="container" data-aos="fade-up">
-    <h2><i class="bi bi-code-slash"></i> Projects</h2>
+  <section class="container">
+    <h2 class="section-title">Professional Journey</h2>
 
-    <div class="card p-3 mb-4 shadow-sm">
-      <h5>📊 Excel Upload & Spell Checker Service (Ford)</h5>
-      <p class="text-muted">Tech Stack: Spring Boot, Angular, GCP, Vertex AI, OpenShift</p>
-      <ul>
-        <li>Created UI and backend integration for uploading Excel files to GCP Cloud Storage.</li>
-        <li>Implemented a Vertex AI + ADK module to contextually validate grammar/spelling in sheet contents.</li>
-        <li>Added support for multiple Excel formats, dynamic field parsing, and GCS versioning.</li>
-        <li>Deployed using OpenShift pipelines with resource constraints, observability via Prometheus.</li>
-      </ul>
+    <div class="timeline">
+
+      <div class="card">
+        <h3>Ford Motor Company</h3>
+        <p><strong>Software Engineer | Aug 2024 - Present</strong></p>
+
+        <ul>
+          <li>Designing and developing enterprise-scale full stack applications using Java, Spring Boot, Angular,
+            OpenShift and Google Cloud Platform.</li>
+          <li>Building scalable backend microservices and REST APIs supporting critical automotive business processes.
+          </li>
+          <li>Developing responsive frontend applications using Angular and modern web technologies.</li>
+          <li>Working extensively with GCP services including Cloud Storage, IAM, Service Accounts, Cloud Build,
+            Artifact Registry, Secret Manager and Vertex AI.</li>
+          <li>Implementing cloud-native solutions on OpenShift and Kubernetes with focus on scalability and resiliency.
+          </li>
+          <li>Driving innovation initiatives involving OpenShift backup automation and recovery workflows.</li>
+          <li>Developing AI-powered document intelligence solutions including Excel processing and grammar validation.
+          </li>
+          <li>Exploring RAG architectures, AI Agents and enterprise AI integration patterns.</li>
+          <li>Contributing to CI/CD modernization using GitHub Actions and automated deployment strategies.</li>
+          <li>Actively participating in sprint planning, retrospectives, code reviews and architecture discussions.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Cognizant Technology Solutions (CoreLogic)</h3>
+        <p><strong>Software Engineer | Sep 2021 - Aug 2024</strong></p>
+
+        <ul>
+          <li>Started professional journey through campus placement and worked on large-scale financial domain
+            applications.</li>
+          <li>Developed enterprise applications using Java, Spring Boot, Angular, MySQL and GCP.</li>
+          <li>Built scalable backend services and REST APIs supporting mortgage and property tax platforms.</li>
+          <li>Worked on frontend development and integration with multiple enterprise systems.</li>
+          <li>Participated in cloud modernization initiatives and containerized deployments.</li>
+          <li>Improved performance through database optimization and application-level enhancements.</li>
+          <li>Resolved production incidents, security vulnerabilities and platform stability issues.</li>
+          <li>Collaborated with North American product teams and stakeholders.</li>
+          <li>Received recognition for delivery excellence and project contributions.</li>
+        </ul>
+
+      </div>
     </div>
+  </section>
 
-    <div class="card p-3 mb-4 shadow-sm">
-      <h5>☕ Cafe Management System</h5>
-      <p class="text-muted">Tech Stack: Java, Spring Boot, Angular, MySQL, JWT</p>
-      <ul>
-        <li>Developed complete POS-like application supporting admin login, product management, and order flow.</li>
-        <li>Implemented Spring Security with JWT token generation and Angular interceptors.</li>
-        <li>Added charts, PDF invoice generator, and live inventory management features.</li>
-      </ul>
+  <section class="container">
+    <h2 class="section-title">Technical Expertise</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Backend Development</h3>
+        <ul class="skill-list">
+          <li>Java 8 / 11 / 17</li>
+          <li>Spring Boot</li>
+          <li>Spring Security</li>
+          <li>Spring Data JPA</li>
+          <li>Hibernate</li>
+          <li>REST APIs</li>
+          <li>Microservices Architecture</li>
+          <li>JWT Authentication</li>
+          <li>OAuth2</li>
+          <li>Maven</li>
+          <li>Gradle</li>
+          <li>Swagger / OpenAPI</li>
+          <li>Distributed Systems</li>
+          <li>Event Driven Architecture</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Frontend Development</h3>
+        <ul class="skill-list">
+          <li>Angular</li>
+          <li>TypeScript</li>
+          <li>JavaScript</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Bootstrap</li>
+          <li>Responsive Design</li>
+          <li>RxJS</li>
+          <li>REST API Integration</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Google Cloud Platform</h3>
+        <ul class="skill-list">
+          <li>Cloud Storage (GCS)</li>
+          <li>Cloud Run</li>
+          <li>Cloud Functions</li>
+          <li>Cloud Build</li>
+          <li>Artifact Registry</li>
+          <li>IAM</li>
+          <li>Service Accounts</li>
+          <li>Secret Manager</li>
+          <li>Cloud Logging</li>
+          <li>Cloud Monitoring</li>
+          <li>Pub/Sub</li>
+          <li>Cloud Scheduler</li>
+          <li>Load Balancing</li>
+          <li>VPC</li>
+          <li>Vertex AI</li>
+          <li>Cloud Deploy</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>OpenShift & Kubernetes</h3>
+        <ul class="skill-list">
+          <li>OpenShift Container Platform</li>
+          <li>Kubernetes</li>
+          <li>Docker</li>
+          <li>Deployments</li>
+          <li>Services</li>
+          <li>Routes</li>
+          <li>ConfigMaps</li>
+          <li>Secrets</li>
+          <li>CronJobs</li>
+          <li>Jobs</li>
+          <li>Namespace Administration</li>
+          <li>Container Security</li>
+          <li>Platform Automation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>DevOps & CI/CD</h3>
+        <ul class="skill-list">
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>GitHub Actions</li>
+          <li>Jenkins</li>
+          <li>CI/CD Pipelines</li>
+          <li>Release Management</li>
+          <li>Automated Deployments</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>AI & Generative AI</h3>
+        <ul class="skill-list">
+          <li>Vertex AI</li>
+          <li>Google ADK</li>
+          <li>Prompt Engineering</li>
+          <li>RAG Architectures</li>
+          <li>AI Agents</li>
+          <li>Document Intelligence</li>
+          <li>Enterprise AI Integrations</li>
+          <li>Local LLMs</li>
+          <li>Knowledge Retrieval Systems</li>
+        </ul>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card p-3 mb-4 shadow-sm">
-      <h5>🐦 Tweet App</h5>
-      <p class="text-muted">Tech Stack: Java, Spring Boot, Angular, MongoDB, Kafka, JWT</p>
-      <ul>
-        <li>Real-time tweet platform using Kafka for event-based streaming.</li>
-        <li>MongoDB for fast storage/retrieval of posts with embedded comment structure.</li>
-        <li>Implemented reactive Spring endpoints and push-based WebSocket support.</li>
-      </ul>
+  <section class="container">
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="card">
+      <h3>Google Cloud Associate Cloud Engineer</h3>
+      <p>
+        Certified Google Cloud Professional with hands-on experience in cloud-native application development,
+        IAM, Cloud Storage, CI/CD, containerization and infrastructure management.
+      </p>
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section class="container" data-aos="fade-up">
-    <h2><i class="bi bi-patch-check"></i> Certifications</h2>
-    <ul>
-      <li><a href="https://www.credential.net/22e99e36-1bc6-4f77-9ded-6c7c2c0a61d7" target="_blank">🎓 Google Cloud Associate Cloud Engineer</a></li>
-    </ul>
+  <section class="container">
+    <h2 class="section-title">Career Highlights</h2>
+
+    <div class="grid">
+      <div class="card">🚀 Started Professional Career at Cognizant (2021)</div>
+      <div class="card">☁️ Google Cloud Associate Cloud Engineer Certified</div>
+      <div class="card">🏎️ Joined Ford Motor Company (2024)</div>
+      <div class="card">💡 Proposed OpenShift Continuous Backup Innovation</div>
+      <div class="card">📊 Built AI-Powered Excel Validation Platform</div>
+      <div class="card">🤖 Building RAG & Enterprise AI Solutions</div>
+    </div>
   </section>
 
-  <!-- Education -->
-  <section class="container" data-aos="fade-up">
-    <h2><i class="bi bi-mortarboard"></i> Education</h2>
-    <ul>
-      <li><strong>B.Tech (CSE)</strong> – Lovely Professional University – 72%</li>
-    </ul>
+  <section class="container">
+    <h2 class="section-title">Education</h2>
+
+    <div class="card">
+      <h3>Bachelor of Technology (Computer Science & Engineering)</h3>
+      <p>
+        Lovely Professional University (LPU)
+      </p>
+      <p>
+        Graduated with 72%
+      </p>
+    </div>
   </section>
 
-  <!-- Achievements -->
-  <section class="container" data-aos="fade-up">
-    <h2><i class="bi bi-award-fill"></i> Achievements & Interests</h2>
-    <ul>
-      <li>🏆 2nd Place – Blue Bolt Hackathon (Cognizant)</li>
-      <li>🥇 1st Place – North America Project Delivery (Team Award)</li>
-      <li>🎮 Gaming, Cricket, Travel, Tech News & Gadgets</li>
-    </ul>
-  </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-4 mt-5">
-    <p class="mb-0">&copy; 2025 Vijay Chippe. Crafted with ❤️ using Bootstrap, AOS, and AI.</p>
+
+  <footer>
+    © 2026 Vijay Chippe • Full Stack Developer • Java • Cloud • AI
   </footer>
+
 </body>
+
 </html>
